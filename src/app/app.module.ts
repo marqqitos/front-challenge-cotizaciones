@@ -3,22 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './app-routing.module';
-import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+// import { Mate } from '@angular/material/error';
+
+import { InformacionIPComponent } from './modules/informacion-ip/informacion-ip.component';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CotizacionesComponent
+    InformacionIPComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
     HttpClientModule,
-    MatTableModule
+    BrowserAnimationsModule,
+    FormsModule,
+    MatInputModule,
+    MatIconModule,
+    MatDividerModule,
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
